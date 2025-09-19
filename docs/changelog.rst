@@ -9,7 +9,8 @@ Unreleased
 
 New features:
 
-Bug fixes:
+Bug fixes: - :dog:`plugins/discogs`: Fix medium count for 2xLP releases with X,
+Y, XX, YY sides. :bug:`6030`
 
 For packagers:
 

@@ -213,6 +213,14 @@ class DGAlbumInfoTest(BeetsTestCase):
         assert d.mediums == 1
         assert len(d.tracks) == 4
 
+    def test_parse_tracklist_non_standard_multiple_lp(self):
+        """Test non standard Discogs position for a multiple LP release"""
+        release = self._make_release_from_positions(["X", "Y", "XX", "YY"])
+        d = DiscogsPlugin().get_album_info(release)
+
+        assert d.mediums == 2
+        assert len(d.tracks) == 4
+
     def test_parse_tracklist_subtracks_dot(self):
         """Test standard Discogs position 12.2.9#5: "sub tracks, dots"."""
         release = self._make_release_from_positions(["1", "2.1", "2.2", "3"])

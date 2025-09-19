@@ -505,7 +505,7 @@ class DiscogsPlugin(MetadataSourcePlugin):
                     len(track.medium) != 1
                     or
                     # Not within standard incremental medium values (A, B, C, ...).
-                    ord(track.medium) - 64 != side_count + 1
+                    ord(track.medium) - 64 < side_count + 1
                 )
             )
 
@@ -517,6 +517,7 @@ class DiscogsPlugin(MetadataSourcePlugin):
                         index_count = 0
                         medium_count += 1
                 else:
+                    print("medium changed")
                     # Medium changed. Reset index_count.
                     medium_count += 1
                     index_count = 0
