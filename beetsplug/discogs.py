@@ -517,7 +517,6 @@ class DiscogsPlugin(MetadataSourcePlugin):
                         index_count = 0
                         medium_count += 1
                 else:
-                    print("medium changed")
                     # Medium changed. Reset index_count.
                     medium_count += 1
                     index_count = 0
