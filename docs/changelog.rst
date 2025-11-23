@@ -43,6 +43,8 @@ Bug fixes:
   accepted a list of strings). :bug:`5962`
 - Fix a bug introduced in release 2.4.0 where import from any valid
   import-log-file always threw a "none of the paths are importable" error.
+- :doc:`plugins/discogs`: Fixed unexpected flex attr from the Discogs plugin.
+  :bug:`6177`
 
 For plugin developers:
 
